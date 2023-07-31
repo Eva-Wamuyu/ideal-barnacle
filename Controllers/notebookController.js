@@ -21,7 +21,7 @@ const createNotebook = async(req,res) =>{
         return res.status(201).json(
             {
                 status: 'success',
-                message: 'Notebook Added Successfully'
+                body: 'Notebook Added Successfully'
             }
         )
     
@@ -30,7 +30,7 @@ const createNotebook = async(req,res) =>{
         return res.status(500).json(
             {
                 status: "error",
-                message: "Error adding notebook"
+                body: "Error adding notebook"
             }
         )
         
@@ -52,11 +52,11 @@ const getNotebooks = async(req,res)=>{
         )
         
     } catch (error) {
-        console.log(error)
+        
         return res.status(404).json(
             {
                 status: "error",
-                message: "Notebooks not found"
+                body: "Notebooks not found"
             }
         )
         
@@ -64,6 +64,95 @@ const getNotebooks = async(req,res)=>{
 
 }
 
+
+const getNoteBook = async(req, res)=>{
+    try {
+        const id = req.params.id;
+        let response = await DB.exec('getNotebookPROC',{id});
+        
+
+        return res.status(200).json(
+            {
+                status: "success",
+                body: response['recordset']
+            }
+        )
+        
+    } catch (error) {
+        console.log(error)
+        return res.status(404).json(
+            {
+                status: "error",
+                body: "Notebook not found"
+            }
+        )
+
+    }
+
+}
+
+
+const deleteNotebook = async(req,res)=>{
+    try {
+
+        const id = req.params.id;
+        let response = await DB.exec('deleteNotebookPROC',{id});
+
+        return res.status(200).json(
+            {
+                status: "success",
+                body: "Notebook Deleted"
+            }
+        )
+
+
+        
+    } catch (error) {
+
+        
+        return res.status(404).json(
+            {
+                status: "error",
+                body: "Notebook Not deleted"
+            }
+        )
+
+        
+    }
+}
+
+const editNotebook = async(req,res) =>{
+    try {
+
+        const id = req.params.id;
+
+        const {notebook_title, notebook_content} = req.body;
+
+        
+
+        DB.exec('editNotebookPROC',{id,notebook_title,notebook_content});
+
+
+        return res.status(200).json(
+            {
+                status: "success",
+                body: "Notebook Edited Successfully"
+            }
+        )
+
+
+        
+    } catch (error) {
+        return res.status(400).json(
+            {
+                status: "error",
+                body: "Notebook Not Updated"
+            }
+        )
+
+        
+    }
+}
 
 
 
@@ -84,5 +173,8 @@ const formatDate = (timestamp)=>{
 
 module.exports = {
     createNotebook,
-    getNotebooks
+    getNotebooks,
+    getNoteBook,
+    deleteNotebook,
+    editNotebook
 }

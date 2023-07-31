@@ -3,9 +3,28 @@ Content-Type: application/json
 
 {
     "notebook_title": "Brida",
-    "notebook_content": "Book by PauloCoelo" 
+    "notebook_content": "Book by Paulo Coelo" 
 }
 
 
 ###
 GET http://localhost:3000/notebook/
+
+
+###
+GET http://localhost:3000/notebook/3b958064-1a8c-47a4-a0c9-074f15f78777
+
+
+###
+DELETE http://localhost:3000/notebook/3b958064-1a8c-47a4-a0c9-074f15f78777
+
+
+
+###
+PATCH  http://localhost:3000/notebook/c16c8282-25e3-4879-8d5d-76a15a7e059e
+Content-Type: application/json
+
+{
+    "notebook_title": "Emma",
+    "notebook_content": "Book by Jane Austeen" 
+}
