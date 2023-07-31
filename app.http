@@ -1,0 +1,11 @@
+POST http://localhost:3000/notebook
+Content-Type: application/json
+
+{
+    "notebook_title": "Brida",
+    "notebook_content": "Book by PauloCoelo" 
+}
+
+
+###
+GET http://localhost:3000/notebook/
