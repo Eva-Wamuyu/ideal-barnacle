@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1691084641988" clover="3.2.0">
+  <project timestamp="1691084641988" name="All files">
+    <metrics statements="52" coveredstatements="30" conditionals="8" coveredconditionals="8" methods="6" coveredmethods="2" elements="66" coveredelements="40" complexity="0" loc="52" ncloc="52" packages="1" files="1" classes="1"/>
+    <file name="notebookController.js" path="C:\Users\Wamuyu\Documents\THE JITU\BACKEND\Notebook_\Controllers\notebookController.js">
+      <metrics statements="52" coveredstatements="30" conditionals="8" coveredconditionals="8" methods="6" coveredmethods="2"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="7" count="4" type="stmt"/>
+      <line num="8" count="4" type="stmt"/>
+      <line num="9" count="4" type="stmt"/>
+      <line num="10" count="4" type="stmt"/>
+      <line num="12" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="19" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="27" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="38" count="1" type="stmt"/>
+      <line num="40" count="1" type="stmt"/>
+      <line num="46" count="1" type="stmt"/>
+      <line num="55" count="0" type="stmt"/>
+      <line num="66" count="1" type="stmt"/>
+      <line num="67" count="0" type="stmt"/>
+      <line num="69" count="0" type="stmt"/>
+      <line num="72" count="0" type="stmt"/>
+      <line num="81" count="0" type="stmt"/>
+      <line num="93" count="1" type="stmt"/>
+      <line num="94" count="0" type="stmt"/>
+      <line num="95" count="0" type="stmt"/>
+      <line num="96" count="0" type="stmt"/>
+      <line num="99" count="0" type="stmt"/>
+      <line num="107" count="0" type="stmt"/>
+      <line num="108" count="0" type="stmt"/>
+      <line num="120" count="1" type="stmt"/>
+      <line num="121" count="0" type="stmt"/>
+      <line num="123" count="0" type="stmt"/>
+      <line num="124" count="0" type="stmt"/>
+      <line num="126" count="0" type="stmt"/>
+      <line num="138" count="0" type="stmt"/>
+      <line num="149" count="1" type="stmt"/>
+      <line num="150" count="0" type="stmt"/>
+      <line num="152" count="0" type="stmt"/>
+      <line num="154" count="0" type="stmt"/>
+      <line num="158" count="0" type="stmt"/>
+      <line num="161" count="0" type="stmt"/>
+      <line num="171" count="0" type="stmt"/>
+      <line num="185" count="1" type="stmt"/>
+      <line num="186" count="1" type="stmt"/>
+      <line num="187" count="1" type="stmt"/>
+      <line num="188" count="1" type="stmt"/>
+      <line num="189" count="1" type="stmt"/>
+      <line num="190" count="1" type="stmt"/>
+      <line num="191" count="1" type="stmt"/>
+      <line num="192" count="1" type="stmt"/>
+      <line num="194" count="1" type="stmt"/>
+      <line num="199" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

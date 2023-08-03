@@ -9,6 +9,31 @@ const createNotebook = async(req,res) =>{
         const created_at_ = Date.now();
         const {notebook_title, notebook_content} = req.body;
 
+        if(!notebook_title && !notebook_content){
+            return res.status(400).json(
+                {
+                    message: "Request Body Should have notebook_title and notebook_content"
+                }
+            )
+        }
+        if(!notebook_title){
+            return res.status(400).json(
+                {
+                
+                    error: "Request Body Should have notebook_title"
+                }
+            )
+        }
+        if(!notebook_content){
+            return res.status(400).json(
+                {
+                
+                    error: "Request Body Should have notebook_content"
+                }
+            )
+
+        }
+
 
         const created_at = formatDate(created_at_)
         
@@ -21,7 +46,7 @@ const createNotebook = async(req,res) =>{
         return res.status(201).json(
             {
                 status: 'success',
-                body: 'Notebook Added Successfully'
+                message: 'Notebook Added Successfully'
             }
         )
     
