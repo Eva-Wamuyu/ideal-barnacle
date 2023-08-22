@@ -1,0 +1,16 @@
+name: barnacle
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: action/checkout@v1
+      - name: run a single-line script
+        run: echo Intro to G Actions
+      - name: Run Multi-Lines
+        run: |
+            echo Add Intro
+            echo Another Script
+      
